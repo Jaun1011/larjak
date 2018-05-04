@@ -1,16 +1,27 @@
-# Projektbeschreib
+# larjak
 
-Eine Web Standalone Applikation (basierend auf Electron) welche es ermöglicht SSH verbindungen zu managen.
-Aus der Applikation soll direkt der gnome-terminal gestartet werden welche eine SSH Verbindung zum ausgewählten Host aufbaut.
+> SSH Session Manager
 
-# Papierprototype
+## Build Setup
 
-![Story Board](imgs/storyboard.jpeg)
+``` bash
+# install dependencies
+npm install
 
-# Research / Know-How
+# serve with hot reload at localhost:8080
+npm run dev
 
-## Open gnome-terminal
+# build for production with minification
+npm run build
 
-~~~bash
-gnome-terminal -- ssh username@host
-~~~
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
