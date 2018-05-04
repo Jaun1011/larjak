@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="Session">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
   </div>
@@ -7,10 +7,10 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'SessionComponent',
   data () {
     return {
-      msg: 'Welcome to Youasdfasdfr Vue.js App'
+      msg: 'New Session'
     }
   }
 }
