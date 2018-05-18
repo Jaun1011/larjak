@@ -25,3 +25,12 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## TODO
+
+- Material Icons richtig implementieren - [Vue Material](https://vuematerial.io/getting-started)
+- Default Config in Local Storage abspeichern
+- Neue Session in Local Storage abspeichern
+- Beim Session Angelen die Default Config initial in allen Feldern anzeigen
+- DetailView für Session integriere
+- Session öffnen in neuer Bash

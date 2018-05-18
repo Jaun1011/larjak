@@ -16,6 +16,7 @@
     "getskeleton": "^2.0.4-2",
     "skeleton": "^0.1.2",
     "vue": "^2.5.2",
+    "vue-material": "^1.0.0-beta-10.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

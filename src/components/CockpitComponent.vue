@@ -1,23 +1,21 @@
 <style scoped>
-
+    i.material-icons {
+        margin-top: 7px;
+    }
 </style>
-
 
 <template>
     <div class="container">
-        <i class="material-icons">face</i>
-
         <div class="row">
             <div class="eight columns">
                 <h4>Larjak SSH Manager</h4>
             </div>
             <div class="four columns">
-                <button class="button"
-                        v-on:click="route('default')">
-                    <i class="material-icons">build</i>
+                <button v-on:click="route('default')" >
+                    <i class="material-icons" >build</i>
                 </button>
-                <button class="button"
-                        v-on:click="route('new')">New Session
+                <button  v-on:click="route('new')">
+                    <i class="material-icons" >create</i>
                 </button>
             </div>
         </div>
