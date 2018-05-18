@@ -24,4 +24,5 @@ export default new Router({
       component: DefaultSessionComponent
     }
   ]
+    ,mode: "history"
 })
