@@ -1,8 +1,40 @@
-<template>
-    <div class="Cockpit">
+<style scoped>
 
-        <button v-on:click="route('default')" >Default Settings</button>
-        <button v-on:click="route('new')" >New Session</button>
+</style>
+
+
+<template>
+    <div class="container">
+        <i class="material-icons">face</i>
+
+        <div class="row">
+            <div class="eight columns">
+                <h4>Larjak SSH Manager</h4>
+            </div>
+            <div class="four columns">
+                <button class="button"
+                        v-on:click="route('default')">
+                    <i class="material-icons">build</i>
+                </button>
+                <button class="button"
+                        v-on:click="route('new')">New Session
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="four columns">
+                <ul>
+                    <li v-for="(session, index) in sessions">
+                        {{index}} - {{session.name}}
+                    </li>
+                </ul>
+            </div>
+            <div class="eight columns">
+                details
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -11,8 +43,11 @@
         name: 'Cockpit',
         data() {
             return {
-                count: 0,
-                msg: ''
+                sessions: [
+                    {name: "session 1"},
+                    {name: "session 2"},
+                    {name: "session 3"}
+                ]
             }
         },
         methods: {
@@ -23,23 +58,3 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    h1, h2 {
-        font-weight: normal;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
-    }
-</style>
