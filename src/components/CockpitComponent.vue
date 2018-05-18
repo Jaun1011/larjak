@@ -1,16 +1,17 @@
 <template>
-  <div class="SessionComponent">
+  <div class="Cockpit">
     <h1>{{ msg }}</h1>
-    <h2>SessionComponent</h2>
+    <h2>Cockpit</h2>
+    <h2>Cockpit</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SessionComponent',
+  name: 'Cockpit',
   data () {
     return {
-      msg: 'New Session'
+      msg: 'Welcome to Youasdfasdfr Vue.js App'
     }
   }
 }

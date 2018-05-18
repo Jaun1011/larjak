@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="Default Session">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>Default Session</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'DefaultSession',
   data () {
     return {
-      msg: 'Welcome to Youasdfasdfr Vue.js App'
+      msg: 'New Session'
     }
   }
 }
