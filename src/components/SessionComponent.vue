@@ -2,6 +2,34 @@
   <div class="SessionComponent">
     <h1>{{ msg }}</h1>
     <h2>SessionComponent</h2>
+    <div class="container">
+      <form>
+        <div class="row" name="ip">
+          <div class="six columns"> <p> IP </p> </div>
+          <div class="six columns"> </div>
+        </div>
+        <div class="row" name="alias">
+          <div class="six columns"> <p> Alias </p> </div>
+          <div class="six columns"> </div>
+        </div>
+        <div class="row" name="user">
+          <div class="six columns"> <p> User </p> </div>
+          <div class="six columns"> </div>
+        </div>
+        <div class="row" name="password">
+          <div class="six columns"> <p> Password </p> </div>
+          <div class="six columns"> </div>
+        </div>
+        <div class="row" name="script">
+          <div class="six columns"> <p> Script </p> </div>
+          <div class="six columns"> </div>
+        </div>
+        <div class="row" name="key">
+          <div class="six columns"> <p> Key </p> </div>
+          <div class="six columns"> </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
