@@ -1,8 +1,12 @@
 <template>
-  <div class="Default Session">
-    <h1>{{ msg }}</h1>
-    <h2>Default Session</h2>
-  </div>
+  <div class="header">
+    <h1>{{ title }}</h1>
+    <p>User: <input v-model="user"></p>
+    <p>Password: <input v-model="password"></p>
+    <p>Script: <textarea v-model="script"></p></textarea>
+    <p>Key File: <textarea v-model="keyfile" placeholder="place your ssh private key here..."></textarea>
+    <p><button v-bind:disabled="isButtonDisabled">Save</button></p>
+    </div>
 </template>
 
 <script>
@@ -10,7 +14,8 @@ export default {
   name: 'DefaultSession',
   data () {
     return {
-      msg: 'New Session'
+      title: 'Defaults Session',
+      msg: 'Lars'
     }
   }
 }
