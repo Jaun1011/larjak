@@ -4,7 +4,7 @@ import CockpitComponent from '@/components/CockpitComponent'
 import SessionComponent from '@/components/SessionComponent'
 import DefaultSessionComponent from '@/components/DefaultSessionComponent'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
