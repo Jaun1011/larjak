@@ -5,32 +5,33 @@
 
         <div class="container">
             <form>
-                <div class="row" name="ip">
+                <div class="row" id="ip">
                     <div class="six columns"><p> IP </p></div>
-                    <div class="six columns"></div>
+                    <div class="six columns"><input v-model="ip"></div>
                 </div>
-                <div class="row" name="alias">
+                <div class="row" id="alias">
                     <div class="six columns"><p> Alias </p></div>
-                    <div class="six columns"></div>
+                    <div class="six columns"><input v-model="alias"></div>
                 </div>
-                <div class="row" name="user">
+                <div class="row" id="user">
                     <div class="six columns"><p> User </p></div>
-                    <div class="six columns"></div>
+                    <div class="six columns"><input v-model="user"></div>
                 </div>
-                <div v-model="password"
-                        class="row"
-                     name="password">
+                <div class="row" id="password">
                     <div class="six columns"><p> Password </p></div>
-                    <div class="six columns"></div>
+                    <div class="six columns"><input v-model="password"></div>
                 </div>
-                <div class="row" name="script">
+                <div class="row" id="script">
                     <div class="six columns"><p> Script </p></div>
-                    <div class="six columns"></div>
+                  <div class="six columns"><textarea v-model="script"></textarea></div>
                 </div>
-                <div class="row" name="key">
-                    <div class="six columns"><p> Key </p></div>
-                    <div class="six columns"></div>
+                <div class="row" id="sshkey">
+                    <div class="six columns"><p> SSH Key </p></div>
+                  <div class="six columns"><textarea v-model="sshkey"></textarea></div>
                 </div>
+              <div class="row" id="button">
+                <button v-bind:disabled="isButtonDisabled">Save</button>
+              </div>
             </form>
         </div>
     </div>
