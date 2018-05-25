@@ -1,24 +1,23 @@
 <template>
-    <p>
-        User:
-        <input v-model="session.user">
-    <p>
-        Password:
-        <input v-model="session.password">
-    </p>
-    <p>
-        Script:
-        <textarea v-model="session.script"></textarea></p>
-    <p>
-        Key File:
-        <input v-model="session.keyfile">
-    </p>
+    <div>
+        <div class="row">
+            <div class="six columns">Host</div>
+            <div class="six columns">
+                <input v-model="session.host">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">Alias</div>
+            <div class="six columns">
+                <input v-model="session.alias">
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
     export default {
         name: "SessionCore",
-
         props:[
             'session'
         ],

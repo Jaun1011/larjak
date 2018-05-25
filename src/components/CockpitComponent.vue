@@ -23,32 +23,46 @@
         <div class="row">
             <div class="four columns">
                 <ul>
-                    <li v-for="(session, index) in sessions">
+                    <li v-for="(session, index) in sessions"
+                        v-on:click=setSession(session)>
                         {{index}} - {{session.user}}
                     </li>
                 </ul>
             </div>
             <div class="eight columns">
-                details
+                <Session :session=session ></Session>
+                <SessionCore :session=session ></SessionCore>
+                <div class="row">
+                    <button v-on:click=save(session)>Save</button>
+                </div>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
     import SessionService from "../service/SessionService";
+    import Session from "./session/Session.vue";
+    import SessionCore from "./session/SessionCore.vue";
 
     export default {
         name: 'Cockpit',
+        components: {
+            Session,
+            SessionCore
+        },
         data() {
             return {
-                sessions: SessionService.getSessions()
+                sessions: SessionService.getSessions(),
+                session: null
             }
         },
         methods: {
             route: function (route) {
                 this.$router.push(route)
+            },
+            setSession(session){
+                this.session = session;
             }
         }
     }

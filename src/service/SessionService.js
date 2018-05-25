@@ -31,6 +31,8 @@ export default {
 
     setSession: function (session) {
         console.log("save session");
+        console.log(session);
+
         localStorage.setItem(SESSIONKEY + '.' + session.id, JSON.stringify(session));
     }
 }

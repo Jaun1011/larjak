@@ -1,18 +1,30 @@
 <template>
-    <p>
-        User:
-        <input v-model="session.user">
-    <p>
-        Password:
-        <input v-model="session.password">
-    </p>
-    <p>
-        Script:
-        <textarea v-model="session.script"></textarea></p>
-    <p>
-        Key File:
-        <input v-model="session.keyfile">
-    </p>
+    <div>
+        <div class="row">
+            <div class="six columns">User</div>
+            <div class="six columns">
+                <input v-model="session.user">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">Password</div>
+            <div class="six columns">
+                <input v-model="session.password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">Script</div>
+            <div class="six columns">
+                <textarea v-model="session.script"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">SSH Key</div>
+            <div class="six columns">
+                <input v-model="session.keyfile">
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -21,7 +33,7 @@
 
         props:[
             'session'
-        ],
+        ]
     }
 </script>
 

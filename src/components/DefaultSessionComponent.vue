@@ -1,21 +1,9 @@
 <template>
-    <div class="header">
+    <div class="container">
         <AppHeader :title=title></AppHeader>
 
-        <p>
-            User:
-            <input v-model="session.user">
-        <p>
-            Password:
-            <input v-model="session.password">
-        </p>
-        <p>
-            Script:
-            <textarea v-model="session.script"></textarea></p>
-        <p>
-            Key File:
-            <input v-model="session.keyfile">
-        </p>
+        <SessionCore :session=session></SessionCore>
+
         <div class="row">
             <button v-on:click=save(session) >Save</button>
         </div>
@@ -25,10 +13,12 @@
 <script>
     import AppHeader from './app/AppHeader'
     import SessionService from '../service/SessionService'
+    import SessionCore from './session/SessionCore'
 
     export default {
         components: {
-            AppHeader
+            AppHeader,
+            SessionCore
         },
 
         name: 'DefaultSession',
