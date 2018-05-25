@@ -5,33 +5,45 @@
 
         <div class="container">
             <form>
-                <div class="row" id="ip">
-                    <div class="six columns"><p> Host </p></div>
-                    <div class="six columns"><input v-model="host"></div>
+                <div class="row">
+                    <div class="six columns">Host</div>
+                    <div class="six columns">
+                        <input v-model="session.host">
+                    </div>
                 </div>
-                <div class="row" id="alias">
-                    <div class="six columns"><p> Alias </p></div>
-                    <div class="six columns"><input v-model="alias"></div>
+                <div class="row">
+                    <div class="six columns">Alias</div>
+                    <div class="six columns">
+                        <input v-model="session.alias">
+                    </div>
                 </div>
-                <div class="row" id="user">
-                    <div class="six columns"><p> User </p></div>
-                    <div class="six columns"><input v-model="user"></div>
+                <div class="row">
+                    <div class="six columns">User</div>
+                    <div class="six columns">
+                        <input v-model="session.user">
+                    </div>
                 </div>
-                <div class="row" id="password">
-                    <div class="six columns"><p> Password </p></div>
-                    <div class="six columns"><input v-model="password"></div>
+                <div class="row">
+                    <div class="six columns">Password</div>
+                    <div class="six columns">
+                        <input v-model="session.password">
+                    </div>
                 </div>
-                <div class="row" id="script">
-                    <div class="six columns"><p> Script </p></div>
-                  <div class="six columns"><textarea v-model="script"></textarea></div>
+                <div class="row">
+                    <div class="six columns">Script</div>
+                    <div class="six columns">
+                        <textarea v-model="session.script"></textarea>
+                    </div>
                 </div>
-                <div class="row" id="sshkey">
-                    <div class="six columns"><p> SSH Key </p></div>
-                  <div class="six columns"><textarea v-model="sshkey"></textarea></div>
+                <div class="row">
+                    <div class="six columns">SSH Key</div>
+                    <div class="six columns">
+                        <input v-model="session.keyfile">
+                    </div>
                 </div>
-              <div class="row" id="button">
-                <button v-bind:disabled="isButtonDisabled">Save</button>
-              </div>
+                <div class="row">
+                    <button>Save</button>
+                </div>
             </form>
         </div>
     </div>
@@ -40,18 +52,29 @@
 <script>
     import AppHeader from './AppHeader'
 
+    import SessionService from '../service/SessionService'
+    import uuidv4 from 'uuid/v4'
+
     export default {
-        components: {AppHeader},
-        component:[
+        components: {
             AppHeader
-        ],
+        },
         name: 'SessionComponent',
         data() {
+            const defaultSession = SessionService.getDefaultSession();
             return {
-                title: 'New Session'
+                title: 'New Session',
+                session: {
+                    id: uuidv4(),
+                    alias: 'alias',
+                    host: 'host',
+                    user: defaultSession.user,
+                    password: defaultSession.password,
+                    script: defaultSession.script,
+                    keyfile: defaultSession.keyfile
+                }
             }
-        },
-
+        }
     }
 </script>
 

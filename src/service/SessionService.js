@@ -5,6 +5,8 @@ import Vue from 'vue';
 
 export default {
     setDefaultSession: function (session) {
+        console.log('Default saved');
+        console.log(session);
         localStorage.setItem(DEFAULTKEY, JSON.stringify(session));
     },
 

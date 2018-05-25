@@ -25,7 +25,6 @@
 <script>
     import AppHeader from './AppHeader'
     import SessionService from '../service/SessionService'
-    import uuidv4 from 'uuid/v4'
 
     export default {
         components: {
@@ -39,10 +38,10 @@
             return {
                 title: 'Defaults Session',
                 session: {
-                    user: defaultSession.user ? defaultSession.user : 'user',
-                    password: defaultSession.password ? defaultSession.password  :'password ',
-                    script:  defaultSession.script ? defaultSession.script : 'script',
-                    keyfile:  defaultSession.keyfile ? defaultSession.keyfile : 'keyfile',
+                    user: defaultSession.user ? defaultSession.user : 'setDefaultMessage',
+                    password: defaultSession.password ? defaultSession.password  :'setDefaultMessage',
+                    script:  defaultSession.script ? defaultSession.script : 'setDefaultMessage',
+                    keyfile:  defaultSession.keyfile ? defaultSession.keyfile : 'setDefaultMessage',
                 }
             }
         },
