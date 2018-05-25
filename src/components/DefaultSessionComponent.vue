@@ -1,9 +1,10 @@
 <template>
     <div class="header">
-        <h1>{{ title }}</h1>
+        <AppHeader :title=title ></AppHeader>
+
         <p>User: <input v-model="user"></p>
         <p>Password: <input v-model="password"></p>
-        <p>Script: <textarea v-model="script"></p></textarea>
+        <p>Script: <textarea v-model="script"></textarea></p>
         <p>Key File: <textarea v-model="keyfile" placeholder="place your ssh private key here..."></textarea>
         <p>
             <button v-bind:disabled="isButtonDisabled">Save</button>
@@ -12,7 +13,13 @@
 </template>
 
 <script>
+    import AppHeader from './AppHeader'
+
     export default {
+        components: {
+            AppHeader
+        },
+
         name: 'DefaultSession',
         data() {
             return {
