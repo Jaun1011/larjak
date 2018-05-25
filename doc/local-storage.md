@@ -10,7 +10,7 @@ The following key/value pairs are used:
 +------------------+---------------------------+
 | defaultSettings  | JSON defaultSettings      |
 +------------------+---------------------------+
-| sessions         | JSON sessions             |
+| session_[id]     | JSON sessions             |
 +------------------+---------------------------+
 
 ## JSON defaultSettings
@@ -31,20 +31,13 @@ The following JSON object is used for storing the defaultSettings:
 
 ## JSON sessions
 
-The following JSON object is used for storing all sessions:
+All sessions are stored in there own key: "session_[id]"
 
 ~~~json
 [
   {
-    "name": "session1",
-    "host": "IP-or-FQDN",
-    "user": "myuser",
-    "password": "mypassword",
-    "script": "script",
-    "keyfile": "key-file-path"
-  },
-  {
-    "name": "session2",
+    "id": "[generated-uuid]",
+    "alias": "session1",
     "host": "IP-or-FQDN",
     "user": "myuser",
     "password": "mypassword",
