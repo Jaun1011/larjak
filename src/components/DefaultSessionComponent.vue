@@ -15,15 +15,15 @@
         <p>
             Key File:
             <input v-model="session.keyfile">
-        <p>
-            <button v-on:click=save(session)>Save
-            </button>
         </p>
+        <div class="row">
+            <button v-on:click=save(session) >Save</button>
+        </div>
     </div>
 </template>
 
 <script>
-    import AppHeader from './AppHeader'
+    import AppHeader from './app/AppHeader'
     import SessionService from '../service/SessionService'
 
     export default {

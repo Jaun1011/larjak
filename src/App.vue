@@ -5,8 +5,16 @@
 </template>
 
 <script>
+import SessionService from "./service/SessionService";
+
 export default {
-  name: 'App'
+    name: 'App',
+    data(){
+        SessionService.initDefaultSession();
+        return{
+            title: 'Larjak'
+        }
+    }
 }
 </script>
 

@@ -24,7 +24,7 @@
             <div class="four columns">
                 <ul>
                     <li v-for="(session, index) in sessions">
-                        {{index}} - {{session.name}}
+                        {{index}} - {{session.user}}
                     </li>
                 </ul>
             </div>
@@ -37,15 +37,13 @@
 </template>
 
 <script>
+    import SessionService from "../service/SessionService";
+
     export default {
         name: 'Cockpit',
         data() {
             return {
-                sessions: [
-                    {name: "session 1"},
-                    {name: "session 2"},
-                    {name: "session 3"}
-                ]
+                sessions: SessionService.getSessions()
             }
         },
         methods: {

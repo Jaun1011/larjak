@@ -1,56 +1,50 @@
 <template>
-    <div class="SessionComponent">
-
+    <div class="container">
         <AppHeader :title=title></AppHeader>
-
-        <div class="container">
-            <form>
-                <div class="row">
-                    <div class="six columns">Host</div>
-                    <div class="six columns">
-                        <input v-model="session.host">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">Alias</div>
-                    <div class="six columns">
-                        <input v-model="session.alias">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">User</div>
-                    <div class="six columns">
-                        <input v-model="session.user">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">Password</div>
-                    <div class="six columns">
-                        <input v-model="session.password">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">Script</div>
-                    <div class="six columns">
-                        <textarea v-model="session.script"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">SSH Key</div>
-                    <div class="six columns">
-                        <input v-model="session.keyfile">
-                    </div>
-                </div>
-                <div class="row">
-                    <button>Save</button>
-                </div>
-            </form>
+        <div class="row">
+            <div class="six columns">Host</div>
+            <div class="six columns">
+                <input v-model="session.host">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">Alias</div>
+            <div class="six columns">
+                <input v-model="session.alias">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">User</div>
+            <div class="six columns">
+                <input v-model="session.user">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">Password</div>
+            <div class="six columns">
+                <input v-model="session.password">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">Script</div>
+            <div class="six columns">
+                <textarea v-model="session.script"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">SSH Key</div>
+            <div class="six columns">
+                <input v-model="session.keyfile">
+            </div>
+        </div>
+        <div class="row">
+            <button v-on:click=save(session)>Save</button>
         </div>
     </div>
 </template>
 
 <script>
-    import AppHeader from './AppHeader'
+    import AppHeader from './app/AppHeader'
 
     import SessionService from '../service/SessionService'
     import uuidv4 from 'uuid/v4'
@@ -73,6 +67,11 @@
                     script: defaultSession.script,
                     keyfile: defaultSession.keyfile
                 }
+            }
+        },
+        methods: {
+            save: (session) => {
+                SessionService.setSession(session)
             }
         }
     }
