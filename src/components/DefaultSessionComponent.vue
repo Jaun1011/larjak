@@ -3,9 +3,9 @@
         <AppHeader :title=title ></AppHeader>
 
         <p>User: <input v-model="user"></p>
-        <p>Password: <input v-model="password"></p>
+        <p>Password: <input v-model="password"></input></p>
         <p>Script: <textarea v-model="script"></textarea></p>
-        <p>Key File: <textarea v-model="keyfile" placeholder="place your ssh private key here..."></textarea>
+        <p>Key File: <input v-model="keyfile"></input>
         <p>
             <button v-bind:disabled="isButtonDisabled">Save</button>
         </p>
