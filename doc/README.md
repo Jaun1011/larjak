@@ -15,7 +15,11 @@ Aus der Applikation soll direkt der gnome-terminal gestartet werden welche eine 
 gnome-terminal -- ssh username@host
 ~~~
 
+## ssh execute command
+
+~~~bash
+ssh -t 'command; bash -l'
+~~~
 
 ## Setup
 `npm install -g vue-cli`
-
