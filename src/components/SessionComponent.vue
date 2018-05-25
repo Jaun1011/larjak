@@ -6,8 +6,8 @@
         <div class="container">
             <form>
                 <div class="row" id="ip">
-                    <div class="six columns"><p> IP </p></div>
-                    <div class="six columns"><input v-model="ip"></div>
+                    <div class="six columns"><p> Host </p></div>
+                    <div class="six columns"><input v-model="host"></div>
                 </div>
                 <div class="row" id="alias">
                     <div class="six columns"><p> Alias </p></div>
