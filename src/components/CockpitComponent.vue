@@ -11,11 +11,11 @@
                 <h4>Larjak SSH Manager</h4>
             </div>
             <div class="four columns">
-                <button v-on:click="route('default')" >
-                    <i class="material-icons" >build</i>
+                <button v-on:click="route('default')">
+                    <i class="material-icons">build</i>
                 </button>
-                <button  v-on:click="route('new')">
-                    <i class="material-icons" >create</i>
+                <button v-on:click="route('new')">
+                    <i class="material-icons">create</i>
                 </button>
             </div>
         </div>
