@@ -9,18 +9,11 @@ export default {
     },
 
     setDefaultSession: function (session) {
-        console.log('Default saved');
-        console.log(session);
-
-        localStorage.setItem(DEFAULTKEY, JSON.stringify(session));
+        this.saveValueByKey(DEFAULTKEY, session);
     },
 
     getDefaultSession: function () {
         return this.getValueByKey(DEFAULTKEY);
-    },
-
-    getValueByKey: function(key){
-        return JSON.parse(localStorage.getItem(key));
     },
 
     getSessions: function () {
@@ -34,9 +27,16 @@ export default {
     },
 
     setSession: function (session) {
-        console.log("save session");
-        console.log(session);
+        this.saveValueByKey(SESSIONKEY + '.' + session.id, session);
+    },
 
-        localStorage.setItem(SESSIONKEY + '.' + session.id, JSON.stringify(session));
+    getValueByKey: function(key){
+        return JSON.parse(localStorage.getItem(key));
+    },
+
+    saveValueByKey: function(key, value){
+        console.log('Saved Value');
+        console.log(session);
+        return localStorage.setItem(key, JSON.stringify(value));
     }
 }
