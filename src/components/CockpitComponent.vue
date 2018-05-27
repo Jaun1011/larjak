@@ -29,7 +29,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="eight columns">
+            <div class="eight columns" v-if=session >
                 <Session :session=session ></Session>
                 <SessionCore :session=session ></SessionCore>
                 <div class="row">

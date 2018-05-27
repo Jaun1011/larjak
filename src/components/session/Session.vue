@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        name: "SessionCore",
+        name: "Session",
         props:[
             'session'
         ],

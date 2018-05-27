@@ -16,7 +16,11 @@ export default {
     },
 
     getDefaultSession: function () {
-        return JSON.parse(localStorage.getItem(DEFAULTKEY));
+        return this.getValueByKey(DEFAULTKEY);
+    },
+
+    getValueByKey: function(key){
+        return JSON.parse(localStorage.getItem(key));
     },
 
     getSessions: function () {
@@ -24,8 +28,8 @@ export default {
         return Object.keys(localStorage).filter((key) => {
             return key !== DEFAULTKEY &&
                 key.split('.')[0] === SESSIONKEY;
-        }).map((key) => {
-            return _.assign({}, defaultSession, defaultSession);
+        }).map((sessionValue) => {
+            return _.assign({}, defaultSession, this.getValueByKey(sessionValue));
         });
     },
 

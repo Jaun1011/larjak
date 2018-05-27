@@ -31,8 +31,8 @@
                 title: 'New Session',
                 session: {
                     id: uuidv4(),
-                    alias: 'alias',
-                    host: 'host',
+                    alias: "alias",
+                    host: "host",
                     user: defaultSession.user,
                     password: defaultSession.password,
                     script: defaultSession.script,
