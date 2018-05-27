@@ -58,11 +58,14 @@
             }
         },
         methods: {
-            route: function (route) {
+            route(route) {
                 this.$router.push(route)
             },
             setSession(session){
                 this.session = session;
+            },
+            save(session) {
+                SessionService.setSession(session)
             }
         }
     }
