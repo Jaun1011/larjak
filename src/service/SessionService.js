@@ -36,7 +36,7 @@ export default {
 
     saveValueByKey: function(key, value){
         console.log('Saved Value');
-        console.log(session);
+        console.log(value);
         return localStorage.setItem(key, JSON.stringify(value));
     }
 }
