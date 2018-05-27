@@ -20,7 +20,6 @@
         props:[
             'title'
         ],
-
         methods: {
             route: function (route) {
                 this.$router.push(route)
@@ -30,5 +29,7 @@
 </script>
 
 <style scoped>
-
+    i.material-icons {
+        margin-top: 7px;
+    }
 </style>

@@ -1,37 +1,23 @@
-<style scoped>
-    i.material-icons {
-        margin-top: 7px;
-    }
-</style>
 
 <template>
     <div class="container">
-        <div class="row">
-            <div class="eight columns">
-                <h4>Larjak SSH Manager</h4>
-            </div>
-            <div class="four columns">
-                <button v-on:click="route('default')">
-                    <i class="material-icons">build</i>
-                </button>
-                <button v-on:click="route('new')">
-                    <i class="material-icons">create</i>
-                </button>
-            </div>
-        </div>
-
+        <CockpitHeader title="Cockpit" ></CockpitHeader>
         <div class="row">
             <div class="four columns">
                 <ul>
                     <li v-for="(session, index) in sessions"
                         v-on:click=setSession(session)>
-                        {{index}} - {{session.user}}
+                        {{index}} - {{session.alias}}
                     </li>
                 </ul>
             </div>
             <div class="eight columns" v-if=session >
                 <Session :session=session ></Session>
                 <SessionCore :session=session ></SessionCore>
+
+                <div class="row">
+                    <button v-on:click=remove(session)>Remove</button>
+                </div>
                 <div class="row">
                     <button v-on:click=save(session)>Save</button>
                 </div>
@@ -41,6 +27,8 @@
 </template>
 
 <script>
+    import CockpitHeader from './app/CockpitHeader.vue'
+
     import SessionService from "../service/SessionService";
     import Session from "./session/Session.vue";
     import SessionCore from "./session/SessionCore.vue";
@@ -48,6 +36,7 @@
     export default {
         name: 'Cockpit',
         components: {
+            CockpitHeader,
             Session,
             SessionCore
         },
@@ -58,11 +47,13 @@
             }
         },
         methods: {
-            route(route) {
-                this.$router.push(route)
-            },
             setSession(session){
                 this.session = session;
+            },
+            remove(session) {
+                SessionService.removeSession(session);
+                this.session = null;
+                this.sessions = SessionService.getSessions();
             },
             save(session) {
                 SessionService.setSession(session)
