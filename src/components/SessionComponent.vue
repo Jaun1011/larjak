@@ -4,7 +4,7 @@
         <Session :session=session ></Session>
         <SessionCore :session=session ></SessionCore>
         <div class="row">
-            <button v-on:click=save(session)>Save</button>
+            <button v-on:click="validate">Save</button>
         </div>
     </div>
 </template>
@@ -26,23 +26,42 @@
         },
         name: 'SessionComponent',
         data() {
-            const defaultSession = SessionService.getDefaultSession();
             return {
                 title: 'New Session',
                 session: {
                     id: uuidv4(),
-                    alias: "alias",
-                    host: "host",
-                    user: defaultSession.user,
-                    password: defaultSession.password,
-                    script: defaultSession.script,
-                    keyfile: defaultSession.keyfile
+                    alias: "",
+                    host: "",
+                    user: "",
+                    password: "",
+                    script: "",
+                    keyfile: ""
                 }
             }
         },
         methods: {
             save: (session) => {
                 SessionService.setSession(session)
+            },
+            validate: function(e) {
+                if(this.session.alias && this.session.user && this.session.password && this.session.host) {
+                    console.log("ok");
+                    return true;
+                }
+                else {
+                    if(!this.session.alias) {
+                        console.log("alias missing");
+                    }
+                    if(!this.session.host) {
+                        console.log("host missing");
+                    }
+                    if(!this.session.user) {
+                        console.log("user missing");
+                    }
+                    if(!this.session.password) {
+                        console.log("password missing");
+                    }
+                } e.preventDefault();
             }
         }
     }
