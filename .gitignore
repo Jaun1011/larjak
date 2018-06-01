@@ -3,6 +3,7 @@ node_modules
 node_modules/
 .idea
 dist/
+larjak-linux-x64
 
 
 # Compiled source #
