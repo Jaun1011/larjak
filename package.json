@@ -20,7 +20,7 @@
     "vue": "^2.5.2",
     "vue-material": "^1.0.0-beta-10.2",
     "vue-router": "^3.0.1",
-    "electron": ""
+    "electron": "1.3.45"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
