@@ -1,9 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+body {
+    background-color: black;
+}
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Ubuntu Mono', Serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0 auto;
     width: 80%;
-    color: #2c3e50;
+    color: lawngreen;
     margin-top: 60px;
+}
+button {
+    color: white;
+    background-color: grey;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.material-icons {
+    margin-top: 7px;
+    position: relative;
+    color: white;
 }
