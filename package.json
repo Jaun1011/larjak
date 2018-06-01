@@ -5,7 +5,7 @@
   "author": "Kevin Staeger, Lars Baettig, Jan Kuonen",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js & sleep 5 && NODE_ENV=DEV electron app.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
@@ -19,7 +19,8 @@
     "uuid": "^3.2.1",
     "vue": "^2.5.2",
     "vue-material": "^1.0.0-beta-10.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "electron": ""
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
