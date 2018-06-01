@@ -5,7 +5,6 @@ export default {
 
     separator :  '.',
 
-
     generateSessionKey: function (id) {
         return SESSIONKEY + this.separator + id
     },
