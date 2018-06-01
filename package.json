@@ -5,7 +5,7 @@
   "author": "Kevin Staeger, Lars Baettig, Jan Kuonen",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js & sleep 5 && NODE_ENV=DEV electron app.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js & sleep 5 && NODE_ENV=DEV ./node_modules/electron/dist/electron app.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
