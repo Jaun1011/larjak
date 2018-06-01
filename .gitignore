@@ -2,7 +2,7 @@ node_modules
 .vscode/
 node_modules/
 .idea
-
+dist/
 
 
 # Compiled source #
