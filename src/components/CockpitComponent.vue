@@ -6,27 +6,22 @@
                 <ul>
                     <li v-for="(session, index) in sessions"
                         v-on:click=setSession(session)>
-                        {{index}} - {{session.alias}}
-
-
-                        <button v-on:click=connect(session)>
-                            <i class="material-icons">transform</i>
+                        {{index}}: {{session.alias}}
+                        <button v-on:click=connect(session) class="buttonSettings">
+                            <i class="material-icons">launch</i>
                         </button>
-
                     </li>
                 </ul>
             </div>
-            <div class="eight columns" v-if=session>
+            <div class="eight columns sessionEdit" v-if=session>
                 <Session :session=session></Session>
                 <SessionCore :session=session></SessionCore>
 
                 <div class="row">
-                    <button v-on:click=remove(session)>
+                    <button v-on:click=remove(session) class="buttonSettingsLaunched">
                         <i class="material-icons">delete</i>
                     </button>
-                </div>
-                <div class="row">
-                    <button v-on:click=save(session)>
+                    <button v-on:click=save(session) class="buttonSettingsLaunched">
                         <i class="material-icons">save</i>
                     </button>
                 </div>

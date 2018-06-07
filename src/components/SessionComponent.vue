@@ -4,7 +4,7 @@
         <Session :session=session ></Session>
         <SessionCore :session=session ></SessionCore>
         <div class="row">
-            <button v-on:click=save(session)>Save</button>
+            <button v-on:click=save(session)><i class="material-icons">save</i></button>
         </div>
     </div>
 </template>

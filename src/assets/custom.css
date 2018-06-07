@@ -11,14 +11,89 @@ body {
     color: lawngreen;
     margin-top: 60px;
 }
+
+.appHeader {
+    border-bottom-style: dotted;
+    border-bottom-width: 3px;
+    border-color: lawngreen;
+    margin-bottom: 25px;
+    padding: 0px;
+}
+
+.appHeaderTitle {
+    margin: 0px;
+    padding: 0px;
+}
+
+.appHeaderButton {
+    border-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.appHeaderButton > i {
+    color: mediumvioletred;
+}
+
 button {
-    color: white;
-    background-color: grey;
     padding-left: 7px;
     padding-right: 7px;
 }
+
+
+.buttonSettings {
+    background: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.buttonSettings > i {
+    font-size: 13px;
+}
+
+.buttonSettingsLaunched {
+    background: none;
+    border: none;
+}
+
+.buttonSettingsLaunched > i {
+    font-size: 20px;
+}
+
+.cockpitHeader {
+    border-bottom-style: dotted;
+    border-bottom-width: 3px;
+    border-bottom-color: lawngreen;
+    margin: 0px;
+}
+
+.cockpitHeaderTitle {
+    margin: 0px;
+}
+
+.cockpitHeaderButtons {
+    text-align: right;
+}
+
+.sessionEdit {
+    margin-top: 25px;
+    padding: 15px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: lawngreen;
+}
+
 .material-icons {
     margin-top: 7px;
     position: relative;
     color: white;
+}
+
+ul {
+    margin-top: 25px;
+}
+
+li {
+    list-style-type: none;
 }

@@ -1,14 +1,14 @@
 <template>
-    <div class="row">
+    <div class="row cockpitHeader">
         <div class="eight columns">
-            <h4>{{title}}</h4>
+            <h4 class="cockpitHeaderTitle">{{title}}</h4>
         </div>
-        <div class="four columns">
+        <div class="four columns cockpitHeaderButtons">
             <button v-on:click="route('default')">
-                <i class="material-icons">build</i>
+                <i class="material-icons">edit</i>
             </button>
             <button v-on:click="route('new')">
-                <i class="material-icons">create</i>
+                <i class="material-icons">add</i>
             </button>
         </div>
     </div>

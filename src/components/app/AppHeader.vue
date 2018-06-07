@@ -1,13 +1,13 @@
 <template>
     <div class="row">
-        <div class="row">
+        <div class="row appHeader">
             <div class="two columns">
-                <button class="button"
-                        v-on:click="route('/')" >back
+                <button class="button appHeaderButton" v-on:click="route('/')" >
+                    <i class="material-icons">backspace</i>
                 </button>
             </div>
             <div class="ten columns">
-                <h2>{{title}}</h2>
+                <h2 class="appHeaderTitle">{{title}}</h2>
             </div>
         </div>
     </div>
