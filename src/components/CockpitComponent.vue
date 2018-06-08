@@ -34,10 +34,12 @@
     import CockpitHeader from './app/CockpitHeader.vue'
 
     import SessionService from "../service/SessionService";
-    import SshTerminal from "../service/SshTerminal";
 
     import Session from "./session/Session.vue";
     import SessionCore from "./session/SessionCore.vue";
+    import axios from 'axios';
+
+
 
     export default {
         name: 'Cockpit',
@@ -65,7 +67,15 @@
                 SessionService.setSession(session)
             },
             connect(session){
-                SshTerminal.run(session);
+                axios.get(`http://localhost:8081`)
+                    .then(response => {
+                        // JSON responses are automatically parsed.
+                        this.posts = response.data
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    })
+
             }
         }
     }
