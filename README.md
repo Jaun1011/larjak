@@ -24,13 +24,18 @@ npm run unit
 npm test
 ```
 
-## Pack for Linux
+## Project details
 
-``` bash
-npm run pack
-```
+All the project planning details can be found here [doc/README.md](doc/README.md).
 
-Will create an executable under `larjak-linux-x64/larjak`
+## Local Storage
 
+We do use local Storage for persistance, the documentation can be found here: [doc/local-storage.md](doc/local-storage.md).
+
+## Electron
+
+The documentation regarding Electron can be found here: [doc/electron.md](doc/electron.md).
+
+## Vue.js
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
