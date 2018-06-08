@@ -5,13 +5,10 @@ We use the browser local storage for saving all of our data.
 The following key/value pairs are used:
 
 
-+------------------+---------------------------+
 | Key              | Value                     |
-+------------------+---------------------------+
+|------------------|---------------------------|
 | defaultSettings  | JSON defaultSettings      |
-+------------------+---------------------------+
 | session_[id]     | JSON sessions             |
-+------------------+---------------------------+
 
 ## JSON defaultSettings
 
