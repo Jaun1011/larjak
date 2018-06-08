@@ -36,6 +36,10 @@ We do use local Storage for persistance, the documentation can be found here: [d
 
 The documentation regarding Electron can be found here: [doc/electron.md](doc/electron.md).
 
+## Server backend
+
+Electron and webpack do not allow us to spawn a child process, as workaround we use a backend service for spawning the `gnome-shell`, documentatoin can be found here [doc/server.md](doc/server.md)
+
 ## Vue.js
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
