@@ -7,6 +7,13 @@ const sourceMapEnabled = isProduction
   : config.dev.cssSourceMap
 
 module.exports = {
+  "externals": {
+   "electron": "require('electron')",
+   "child_process": "require('child_process')",
+   // "fs": "require('fs')",
+   // "path": "require('path')"
+   // [remainder omitted]
+},
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
     extract: isProduction
