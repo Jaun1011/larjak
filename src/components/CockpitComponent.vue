@@ -67,7 +67,7 @@
                 SessionService.setSession(session)
             },
             connect(session){
-                axios.get(`http://localhost:8081`)
+                axios.post(`http://localhost:8081`, session)
                     .then(response => {
                         // JSON responses are automatically parsed.
                         this.posts = response.data
